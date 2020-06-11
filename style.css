@@ -3,8 +3,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 1%;
-
+  border-radius: 5%;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
 }
 
 
@@ -12,11 +14,19 @@ body {
   font-family: 'Rubik', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
-  /* background-color: #1063bc; */
+  background: radial-gradient(circle at center, #1083bb, #1073bb, #1066bc);
 }
 
 .header {
   text-align: center;
+  color: #fff;
+}
+header h1 {
+  font-size: 3em;
+}
+
+.lightText {
+  font-weight: 300;
 }
 
 header li {
@@ -29,7 +39,7 @@ header li {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 0em;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
@@ -43,9 +53,11 @@ header li {
   justify-content: space-between;
   margin: auto;
   padding: 2em;
-  border: 0.5em #747474 solid;
+  border: 0.5em #fdc02a solid;
   margin-top: 2em;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
 }
 
 .images {
@@ -75,17 +87,44 @@ form {
 
 button {
   font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
   margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   height: 3em;
-  padding: 0em 3em;
+  padding: 0em 2em;
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.25);
+  color: white;
+  background-color: #1083bb;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+}
+
+button:hover {
+  background-color: #fdc02a;
+  color: #fff;
+  box-shadow: 0px 3px 10px rgba(#816114, 0.7);
+  letter-spacing: 0.5em;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  transform: translateY(-3px);
+;
+
+}
+
+h2, h3 {
+  color: #00476a;
 }
 
 @media only screen and (min-width: 319px) {
 
   .recyclingBin {
-    width: 90%;
+    width: 95%;
     height: 31em;
   }
 
