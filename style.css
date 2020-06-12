@@ -15,6 +15,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   background: radial-gradient(circle at center, #1083bb, #1073bb, #1066bc);
+  border-radius: 0%;
 }
 
 .header {
