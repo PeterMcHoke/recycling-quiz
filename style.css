@@ -264,7 +264,7 @@ a:hover {
 
   .bin {
     width: 95%;
-    
+    min-height: 30%;
     padding: 0em 1em 2em 1em;
   }
 
