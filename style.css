@@ -15,6 +15,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   background: radial-gradient(circle at center, #1083bb, #1073bb, #1066bc);
+  border-radius: 0%;
 }
 
 .header {
@@ -125,7 +126,7 @@ h2, h3 {
 
   .recyclingBin {
     width: 95%;
-    height: 31em;
+    min-height: 31em;
   }
 
   .bin {
@@ -143,7 +144,7 @@ h2, h3 {
 
   .recyclingBin {
     width: 35em;
-    height: 40em;
+    min-height: 40em;
   }
 
   .bin {
@@ -160,7 +161,7 @@ h2, h3 {
 @media only screen and (min-width: 800px) {
   .recyclingBin {
     width: 35em;
-    height: 45em;
+    min-height: 45em;
   }
 
   .bin {
