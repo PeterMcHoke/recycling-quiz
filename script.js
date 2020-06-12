@@ -105,7 +105,7 @@ function showFinal() {
 
   const great = [
     'Great job!',
-    'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmemecrunch.com%2Fmeme%2F1NJY%2Frecycling-makes-me-feel%2Fimage.png&f=1&nofb=1',
+    'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.kappit.com%2Fimg%2Fpics%2F201602_2156_fahfa_sm.jpg&f=1&nofb=1',
     'baby pumped about recycling',
     'You sure know your stuff when it comes to recycling!'
   ];
