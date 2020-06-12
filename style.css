@@ -37,6 +37,10 @@ header li {
   display: inline-block;
 }
 
+.progressGroup span,
+.progressGroup li {
+  background-color: transparent;
+}
 /* The stylings for the main recyclingBin */
 .recyclingBin {
   display: flex;
