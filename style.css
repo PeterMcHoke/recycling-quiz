@@ -3,10 +3,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 5%;
   -webkit-font-smoothing: antialiased;
-  transition: all 0.5s ease 0s;
-  -webkit-transition: all 0.5s ease 0s;
+  /* transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s; */
 }
 
 
@@ -15,7 +14,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   background: radial-gradient(circle at center, #1083bb, #1073bb, #1066bc);
-  border-radius: 0%;
+
 }
 
 .header {
@@ -26,6 +25,9 @@ header h1 {
   font-size: 3em;
 }
 
+p {
+  text-transform: none;
+}
 .lightText {
   font-weight: 300;
 }
@@ -34,7 +36,10 @@ header li {
   list-style: none;
   display: inline-block;
 }
-
+/*
+.responseBin h2 {
+  color: #34c410;
+} */
 /* The stylings for the main recyclingBin */
 .recyclingBin {
   display: flex;
@@ -59,12 +64,18 @@ header li {
   text-align: center;
   background-color: #fff;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.4);
+  border-radius: 1em;
+
 }
 
 .images {
   margin: 1em;
   width: 90%;
   max-width: 240px;
+}
+
+.shadow {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 .bigImage{
@@ -76,15 +87,22 @@ label {
   margin-bottom: 0.5em;
   padding: 0.5em;
   cursor: pointer;
+  text-transform: none;
 }
+ /* label > span {
+   text-transform: lowercase;
+ } */
 
 fieldset {
-  padding: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   border: 0;
 }
-form {
-  text-align: center;
+
+form fieldset label {
+  text-align: left;
 }
+
 
 button {
   font-size: 1em;
@@ -96,7 +114,7 @@ button {
   margin-right: auto;
   height: 3em;
   padding: 0em 2em;
-  border-radius: 20px;
+  border-radius: 2em;
   border: 0;
   box-shadow: 0px 3px 5px rgba(0,0,0,0.25);
   color: white;
@@ -117,53 +135,203 @@ button:hover {
 }
 legend {
   font-weight: 700;
+  color: #1083bb;
 }
-h2, h3 {
+h2, h3, h4 {
   color: #00476a;
 }
 
 h1, h2, h3, p {
   padding: 1em;
 }
+
+p em {
+  /* Adjusting the line height of p on the responses extraInfo */
+  line-height: 130%;
+}
+
+a {
+  text-decoration: none;
+  color:#1083bb;
+}
+a:hover {
+  color: #00476a;
+
+}
+.progressGroup  li {
+  padding: .25em;
+}
+
+.radio {
+  margin: 16px 0;
+  cursor: pointer;
+}
+
+.radio input {
+  display: none;
+}
+.radio input + span {
+  line-height: 22px;
+  height: 22px;
+  padding-left: 22px;
+
+  display: block;
+  position: relative;
+}
+.radio input + span:not(:empty) {
+  padding-left: 30px;
+}
+.radio input + span:before, .radio input + span:after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: block;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+.radio input + span:before {
+  background: #d1d7e3;
+  -webkit-transition: background 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+  transition: background 0.2s ease, -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+  transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2), -webkit-transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+.radio input + span:after {
+  background: #fff;
+  -webkit-transform: scale(0.78);
+          transform: scale(0.78);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  transition: -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4), -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4);
+}
+.radio input:checked + span:before {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  background: #1083bb;
+}
+.radio input:checked + span:after {
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.radio:hover input + span:before {
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
+}
+.radio:hover input + span:after {
+  -webkit-transform: scale(0.74);
+          transform: scale(0.74);
+}
+.radio:hover input:checked + span:after {
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+}
+
+
+
 @media only screen and (min-width: 319px) {
 
+  header h1 {
+    font-size: 2em;
+    padding: 0;
+    padding-top: .5em;
+  }
+  h2 {
+    font-size: 1.5em;
+    padding: 0;
+    padding-top: 1em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  legend {
+    font-size: 1em;
+  }
   .recyclingBin {
-    width: 95%;
+    width: 100%;
     min-height: 31em;
+    padding: 1em;
+    padding-top: 0;
   }
 
   .bin {
-    width: 90%;
+    width: 95%;
     height: 90%;
+    padding: 0em 1em 2em 1em;
   }
 
   .images {
     width: 85%;
+    min-width: 100px;
+  }
+
+  .responseBin .trash {
+    max-width: 150px;
+  }
+
+  fieldset {
+    margin-top: 2em;
+    padding-left: 0;
+}
+  label {
+    padding-bottom: 2em;
   }
 
 }
 
 @media only screen and (min-width: 550px) {
-
+  header h1 {
+    font-size: 3em;
+    padding: 0;
+  }
+  h2 {
+    font-size: 1.75em;
+    padding: 0;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  legend {
+    font-size: 1.25em;
+  }
+  label {
+    padding-bottom: 1.5em;
+  }
+  .radio {
+    margin: 6px 0;
+  }
   .recyclingBin {
-    width: 35em;
+    width: 90%;
     min-height: 40em;
+    padding-top: 1em;
   }
 
   .bin {
-    width: 85%;
+    width: 90%;
     height: 90%;
+    padding: 2em 1em 2.5em 1em;
   }
 
   .images {
     width: 85%;
+  }
+
+  fieldset {
+    margin-top: 0em;
   }
 
 }
 
 @media only screen and (min-width: 800px) {
   .recyclingBin {
-    width: 35em;
+    width: 60%;
+    max-width: 45em;
     min-height: 45em;
   }
 
