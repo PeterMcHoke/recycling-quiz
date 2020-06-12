@@ -258,7 +258,6 @@ a:hover {
   }
   .recyclingBin {
     width: 100%;
-    min-height: 31em;
     padding: 1em;
     padding-top: 0;
   }
@@ -311,7 +310,7 @@ a:hover {
   }
   .recyclingBin {
     width: 90%;
-    min-height: 40em;
+    min-height: 30em;
     padding-top: 1em;
   }
 
@@ -335,7 +334,7 @@ a:hover {
   .recyclingBin {
     width: 60%;
     max-width: 45em;
-    min-height: 45em;
+    min-height: 30em;
   }
 
   .bin {
