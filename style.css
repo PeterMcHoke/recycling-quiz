@@ -36,10 +36,7 @@ header li {
   list-style: none;
   display: inline-block;
 }
-/*
-.responseBin h2 {
-  color: #34c410;
-} */
+
 /* The stylings for the main recyclingBin */
 .recyclingBin {
   display: flex;
@@ -149,7 +146,13 @@ p em {
   /* Adjusting the line height of p on the responses extraInfo */
   line-height: 130%;
 }
-
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+header a:hover {
+  color: #fff;
+}
 a {
   text-decoration: none;
   color:#1083bb;
