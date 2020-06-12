@@ -74,7 +74,7 @@ function correctAnswer() {
       `<h2>Correct!</h2>
       <img src="${STORE[questionNumber].image}" alt="${STORE[questionNumber].imageAlt}" class="images shadow">
       <p class="responseLine"><em>${STORE[questionNumber].extraInfo}</em></p>
-      <button type="button" class="nextButton button">Next</button>
+      <button type="button" class="nextButton button" autofocus>Next</button>
       `
   );
   updateScore();
@@ -86,7 +86,7 @@ function wrongAnswer() {
       <img src="images/red-trash.png" alt="red trash can" class="images trash" width="100px">
       <h4>It's actually:</h4>
       <p><em>${STORE[questionNumber].correctAnswer}</em></p>
-      <button type="button" class="nextButton button">Next</button>`
+      <button type="button" class="nextButton button" autofocus>Next</button>`
     );
 };
 
@@ -136,7 +136,7 @@ function showFinal() {
       <img src="${array[1]}" alt="${array[2]}" class="images">
         <h4>Your score is ${score} / 5</h4>
         <p class="sizeMe">${array[3]}</p>
-        <button type="submit" class="restartButton button">Restart</button>`
+        <button type="submit" class="restartButton button" autofocus>Restart</button>`
   );
 }
 
@@ -153,7 +153,7 @@ function createQuestionForm(questionIndex){
           <span>${answerValue}</span>
         </label>`).appendTo(fieldsetSelector);
   });
-  $("<button type='submit' class='button submit-button'>Submit</button>").appendTo(fieldsetSelector);
+  $("<button type='submit' class='button submit-button' autofocus>Submit</button>").appendTo(fieldsetSelector);
   return formData;;
 };
 
