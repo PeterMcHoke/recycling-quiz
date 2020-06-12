@@ -21,9 +21,9 @@
 
 
       <!--The progress bar that will be present regardless of the state of the quiz-->
-        <section class="group progressGroup hideInitial">
+        <section class="group progressGroup">
           <ul class="item">
-            <li>Question: <span class="questionNumber">0</span>/10</li>
+            <li>Question: <span class="questionNumber">0</span>/5</li>
             <li>Score: <span class="quizScore">0</span></li>
           </ul>
         </section>
@@ -39,32 +39,14 @@
 
 <!--Container to hold the quiz question form-->
         <div class="questionBin bin hideInitial">
-          <form>
-            <fieldset>
-              <legend for="">Question: Lorem ipsum dolor sit amet low orem ipsum dolor..</legend>
-              <label><input type="radio"><span>Answer 1</span></label>
-              <label><input type="radio"><span>Answer 2</span></label>
-              <label><input type="radio"><span>Answer 3</span></label>
-              <label><input type="radio"><span>Answer 4</span></label>
-            </fieldset>
-            <button type='submit' class="button submit-button">Submit</button>
-          </form>
         </div>
 
 <!--Container to show response after user submit-->
-        <div class="resposneBin bin hideInitial">
-          <h2>You got the answer right!</h2>
-          <img src="images/green-recycle-2.png" alt="recycling symbol" class="images bigImage">
-          <p>Good job! Here are some peripheral links that might be helpful.</p>
-          <button type="button" class="nextButton button">Next</button>
+        <div class="responseBin bin hideInitial">
         </div>
 
 <!--Final screen that shows how well the user did and the option to restart-->
         <div class="finalBin bin hideInitial">
-          <h3>Here are your results!</h3>
-          <img src="images/green-recycle-2.png" alt="recycling symbol" class="images bigImage">
-          <p>Your Score is x/10</p>
-          <button type="button" class="button restartButton">Restart</button>
         </div>
 
       </section>
